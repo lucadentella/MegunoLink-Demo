@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meguno-link-project version="1.0">
+  <culture>it-IT</culture>
+  <data>
+    <shared-visualizer-data>
+      <data id="SerialMonitorData">
+        <send-cr-default>true</send-cr-default>
+        <send-lf-default>true</send-lf-default>
+        <word-wrap-default>true</word-wrap-default>
+        <include-date>false</include-date>
+        <include-time>false</include-time>
+        <clear-on-send>false</clear-on-send>
+        <message-history />
+      </data>
+      <data id="DefaultPlotConfigurationData">
+        <show-summary-table>false</show-summary-table>
+        <show-legend>true</show-legend>
+      </data>
+    </shared-visualizer-data>
+  </data>
+  <serial-sources>
+    <default>0</default>
+    <sources>
+      <source type="SharedRS232Port">
+        <id>0</id>
+        <is-programmer>true</is-programmer>
+        <display-name>Arduino UNO</display-name>
+        <auto-connect>false</auto-connect>
+        <port-name>
+          <type>Fixed</type>
+          <port>COM34</port>
+        </port-name>
+        <baud-rate>9600</baud-rate>
+        <data-bits>8</data-bits>
+        <handshaking>None</handshaking>
+        <parity>None</parity>
+        <stop-bits>One</stop-bits>
+      </source>
+    </sources>
+  </serial-sources>
+  <windows>
+    <window>
+      <position left="-8" top="-8" width="1296" height="776" state="Maximized" />
+      <DockPanel FormatVersion="1.0" DockLeftPortion="0.15" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="-1" ActivePane="-1">
+        <Contents Count="3">
+          <Content ID="0" PersistString="mlpChart" AutoHidePortion="0.25" IsHidden="False" IsFloat="True">
+            <SourceId>0</SourceId>
+            <TabTitle>Time Plot</TabTitle>
+            <ShowSourceInTitle>false</ShowSourceInTitle>
+            <show-summary>false</show-summary>
+            <active-channels>Room</active-channels>
+            <reporting-enabled>false</reporting-enabled>
+            <reporting>
+              <width>640</width>
+              <height>480</height>
+              <dpi>96</dpi>
+              <anti-alias>true</anti-alias>
+              <filename-pattern>Graph {Seq}</filename-pattern>
+              <format>b96b3caf-0728-11d3-9d7b-0000f81ef32e</format>
+            </reporting>
+          </Content>
+          <Content ID="1" PersistString="SerialMonitor" AutoHidePortion="0.25" IsHidden="False" IsFloat="True">
+            <WordWrap>true</WordWrap>
+            <IncludeDate>false</IncludeDate>
+            <IncludeTime>false</IncludeTime>
+            <InsertTimestamp>false</InsertTimestamp>
+            <SourceId>0</SourceId>
+            <TabTitle>Monitor</TabTitle>
+            <ShowSourceInTitle>false</ShowSourceInTitle>
+          </Content>
+          <Content ID="2" PersistString="ButtonPanel" AutoHidePortion="0.25" IsHidden="False" IsFloat="True">
+            <SourceId>0</SourceId>
+            <TabTitle>Interface Panel</TabTitle>
+            <ShowSourceInTitle>false</ShowSourceInTitle>
+            <controls>
+              <control type="slider">
+                <name>SamplingSlider</name>
+                <label>SamplingSlider</label>
+                <command><![CDATA[S={SamplingSlider}]]></command>
+                <value>30</value>
+                <min-value>10</min-value>
+                <max-value>60</max-value>
+                <large-change>5</large-change>
+              </control>
+              <control type="button">
+                <name>START</name>
+                <label>START</label>
+                <command><![CDATA[STAR]]></command>
+              </control>
+              <control type="button">
+                <name>STOP</name>
+                <label>STOP</label>
+                <command><![CDATA[STOP]]></command>
+              </control>
+            </controls>
+          </Content>
+        </Contents>
+        <Panes Count="4">
+          <Pane ID="0" DockState="Document" ActiveContent="-1">
+            <Contents Count="3">
+              <Content ID="0" RefID="0" />
+              <Content ID="1" RefID="1" />
+              <Content ID="2" RefID="2" />
+            </Contents>
+          </Pane>
+          <Pane ID="1" DockState="Float" ActiveContent="0">
+            <Contents Count="1">
+              <Content ID="0" RefID="0" />
+            </Contents>
+          </Pane>
+          <Pane ID="2" DockState="Float" ActiveContent="2">
+            <Contents Count="1">
+              <Content ID="0" RefID="2" />
+            </Contents>
+          </Pane>
+          <Pane ID="3" DockState="Float" ActiveContent="1">
+            <Contents Count="1">
+              <Content ID="0" RefID="1" />
+            </Contents>
+          </Pane>
+        </Panes>
+        <DockWindows>
+          <DockWindow ID="0" DockState="Document" ZOrderIndex="0">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </DockWindow>
+          <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="1">
+            <NestedPanes Count="0" />
+          </DockWindow>
+          <DockWindow ID="2" DockState="DockRight" ZOrderIndex="2">
+            <NestedPanes Count="0" />
+          </DockWindow>
+          <DockWindow ID="3" DockState="DockTop" ZOrderIndex="3">
+            <NestedPanes Count="0" />
+          </DockWindow>
+          <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="4">
+            <NestedPanes Count="0" />
+          </DockWindow>
+        </DockWindows>
+        <FloatWindows Count="3">
+          <FloatWindow ID="0" Bounds="877, 52, 372, 300" ZOrderIndex="0">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="3" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+          <FloatWindow ID="1" Bounds="874, 358, 376, 169" ZOrderIndex="1">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="2" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+          <FloatWindow ID="2" Bounds="8, 55, 860, 665" ZOrderIndex="2">
+            <NestedPanes Count="1">
+              <Pane ID="0" RefID="1" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+            </NestedPanes>
+          </FloatWindow>
+        </FloatWindows>
+      </DockPanel>
+    </window>
+  </windows>
+  <reporting>
+    <generate-scheduled-reports>false</generate-scheduled-reports>
+    <destinations>
+      <report-to-folder>
+        <last-report-number>0</last-report-number>
+        <folder-path>C:\Users\dentellaluca\Documents</folder-path>
+        <use-sub-folder>true</use-sub-folder>
+        <sub-folder-pattern>Report {Seq}</sub-folder-pattern>
+        <enabled>true</enabled>
+        <period>PT1H</period>
+        <last-sent>0001-01-01T00:00:00</last-sent>
+      </report-to-folder>
+    </destinations>
+  </reporting>
+</meguno-link-project>
